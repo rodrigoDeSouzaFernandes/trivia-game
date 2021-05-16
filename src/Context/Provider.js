@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import GlobalContext from './GlobalContext'; 
 
 function Provider({children}) {
 
+  const [userInfo, setUserInfo] = useState({})
+
   const context = {
-    
+    userInfo,
+    setUserInfo,
   }
 
   return(
