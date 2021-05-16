@@ -2,7 +2,7 @@ import React from 'react';
 
 import GlobalContext from './GlobalContext'; 
 
-function Provider({Children}) {
+function Provider({children}) {
 
   const context = {
     
@@ -10,7 +10,7 @@ function Provider({Children}) {
 
   return(
     <GlobalContext.Provider value={ context }>
-      {Children}
+      {children}
     </GlobalContext.Provider>
   )
 }

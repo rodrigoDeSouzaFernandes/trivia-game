@@ -1,12 +1,15 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 import Provider from './Context/Provider';
+
+import Login from './Pages/Login'
 
 function App() {
   return (
     <Provider>
-      <Route path="/" component={Login} />
-
+      <Switch>
+        <Route exact path="/" component={ Login } />
+      </Switch>
     </Provider>
   );
 }
